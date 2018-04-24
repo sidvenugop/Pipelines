@@ -14,7 +14,7 @@ svenugopalan/Pipelines7:
     - 'if [ -a /usr/bin/php ]; then'
     -     echo "PHP is already installed"
     - else
-    -     sudo yum install php55 -y
+    -     echo "Apache webserver is installed"
     - fi
 
   Start:
