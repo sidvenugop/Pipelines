@@ -1,0 +1,27 @@
+<-username->/<-app name->:
+
+PkgInclude:
+  - index.php
+
+PreInstall:
+  - echo "Beginning PreInstall"
+  - sudo apt-get update
+  - 'if [ -a /usr/sbin/apache2 ]; then'
+  -     echo "Apache is already installed"
+  - else
+  -     sudo apt-get install apache2 -y
+  - fi
+  - 'if [ -a /usr/bin/php ]; then'
+  -     echo "PHP is already installed"
+  - else
+  -     sudo apt-get install php5 libapache2-mod-php5 -y
+  - fi
+
+Start:
+  - sudo rm -rf /var/www/html/*
+  - sudo mv index.php /var/www/html/
+  - sudo service apache2 restart
+ 
+ PkgInclude:
+  - '*'
+  
