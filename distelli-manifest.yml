@@ -9,18 +9,18 @@ svenugopalan/Pipelines7:
     - 'if [ -a /usr/sbin/apache2 ]; then'
     -     echo "Apache is already installed"
     - else
-    -     sudo yum install apache2 -y
+    -     sudo yum install httpd -y
     - fi
     - 'if [ -a /usr/bin/php ]; then'
     -     echo "PHP is already installed"
     - else
-    -     sudo yum install php5 libapache2-mod-php5 -y
+    -     sudo yum install php5 libhttpd-mod-php5 -y
     - fi
 
   Start:
     - sudo rm -rf /var/www/html/*
     - sudo mv index.php /var/www/html/
-    - sudo systemctl service apache2 restart
+    - sudo systemctl service httpd restart
  
   PkgInclude:
     - '*'
