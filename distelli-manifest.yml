@@ -5,7 +5,7 @@ svenugopalan/Pipelines7:
 
   PreInstall:
     - echo "Beginning PreInstall"
-    - sudo yum update
+    - sudo yum update -y
     - 'if [ -a /usr/sbin/apache2 ]; then'
     -     echo "Apache is already installed"
     - else
