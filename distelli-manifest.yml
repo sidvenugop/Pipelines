@@ -20,7 +20,7 @@ svenugopalan/Pipelines7:
   Start:
     - sudo rm -rf /var/www/html/*
     - sudo mv index.php /var/www/html/
-    - sudo systemctl service httpd restart
+    - sudo systemctl restart httpd
  
   PkgInclude:
     - '*'
