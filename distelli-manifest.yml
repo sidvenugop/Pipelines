@@ -1,27 +1,27 @@
-sidvenugop/Pipelines4:
+sidvenugop/Pipelines5:
 
-PkgInclude:
+  PkgInclude:
   - index.php
 
-PreInstall:
-  - echo "Beginning PreInstall"
-  - sudo yum update
-  - 'if [ -a /usr/sbin/apache2 ]; then'
-  -     echo "Apache is already installed"
-  - else
-  -     sudo yum install apache2 -y
-  - fi
-  - 'if [ -a /usr/bin/php ]; then'
-  -     echo "PHP is already installed"
-  - else
-  -     sudo yum install php5 libapache2-mod-php5 -y
-  - fi
+  PreInstall:
+    - echo "Beginning PreInstall"
+    - sudo yum update
+    - 'if [ -a /usr/sbin/apache2 ]; then'
+    -     echo "Apache is already installed"
+    - else
+    -     sudo yum install apache2 -y
+    - fi
+    - 'if [ -a /usr/bin/php ]; then'
+    -     echo "PHP is already installed"
+    - else
+    -     sudo yum install php5 libapache2-mod-php5 -y
+    - fi
 
-Start:
-  - sudo rm -rf /var/www/html/*
-  - sudo mv index.php /var/www/html/
-  - sudo systemctl service apache2 restart
+  Start:
+    - sudo rm -rf /var/www/html/*
+    - sudo mv index.php /var/www/html/
+    - sudo systemctl service apache2 restart
  
- PkgInclude:
-  - '*'
+  PkgInclude:
+    - '*'
   
