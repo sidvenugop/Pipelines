@@ -1,1 +1,6 @@
-echo "Hello World!  You have successfully deployed your PHP application with Apache and Pipelines!" ;
+<html>
+<header><title>This is title</title></header>
+<body>
+Hello world
+</body>
+</html>
