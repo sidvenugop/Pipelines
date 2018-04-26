@@ -6,16 +6,12 @@ svenugopalan/Pipelines7:
   PreInstall:
     - echo "Beginning PreInstall"
     - sudo yum update -y
-    - 'if [ -a /usr/sbin/apache2 ]; then'
+    - 'if [ /usr/lib/systemd/system/httpd.service ]; then'
     -     echo "Apache is already installed"
     - else
     -     sudo yum install httpd -y
     - fi
-    - 'if [ -a /usr/bin/php ]; then'
-    -     echo "PHP is already installed"
-    - else
-    -     sudo yum install php.x86_64 -y
-    - fi
+    
 
   Start:
     - sudo rm -rf /var/www/html/*
