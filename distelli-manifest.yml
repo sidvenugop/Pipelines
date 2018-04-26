@@ -1,7 +1,7 @@
 svenugopalan/Pipelines7:
 
   PkgInclude:
-  - index.php
+  - index.html
 
   PreInstall:
     - echo "Beginning PreInstall"
@@ -15,7 +15,7 @@ svenugopalan/Pipelines7:
 
   Start:
     - sudo rm -rf /var/www/html/*
-    - sudo mv index.php /var/www/html/
+    - sudo mv index.html /var/www/html/
     - sudo systemctl restart httpd
  
   
