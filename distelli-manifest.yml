@@ -1,8 +1,5 @@
 svenugopalan/Pipelines7:
 
-  PkgInclude:
-  - index.html
-
   PreInstall:
     - echo "Beginning PreInstall"
     - sudo yum update -y
