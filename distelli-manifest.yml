@@ -1,22 +1,7 @@
 svenugopalan/Pipelines7:
 
-  PreInstall:
-    - echo "Beginning PreInstall"
-    - sudo yum update -y
-    - 'if [ /usr/lib/systemd/system/httpd.service ]; then'
-    -     echo "Apache is already installed"
-    - else
-    -     sudo yum install httpd -y
-    - fi
-    
-
-  Start:
-    - sudo rm -rf /var/www/html/*
-    - sudo mv index.html /var/www/html/
-    - sudo systemctl restart httpd
- 
-  Env:
-    - PORT: "3000"
-  
   PkgInclude:
-    - index.html
+    - application.sh
+    
+  Exec:
+    - './application.sh'
