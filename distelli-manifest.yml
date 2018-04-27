@@ -18,3 +18,5 @@ svenugopalan/Pipelines7:
   Env:
     - PORT: "3000"
   
+  PkgInclude:
+    - index.html
