@@ -1,5 +1,7 @@
 svenugopalan/Pipelines7:
-
+  Env:
+    - EXAMPLE: '"This is an example manifest environment variable."'
+    
   PkgInclude:
     - application.sh
     
