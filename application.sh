@@ -6,5 +6,5 @@ sudo yum install httpd -y
 fi
 sudo rm -rf /var/www/html/*
 touch /var/www/html/index.html
-echo - e "<html> \n <header><title>This is title</title></header> \n <body> \n Hello World \n </body> \n </html>" >> /var/www/html/index.html
+echo - e "<html> \n <header><title>This is title</title></header> \n <body> \n Hello World Our First Pipeline Project \n </body> \n </html>" >> /var/www/html/index.html
 service httpd restart
