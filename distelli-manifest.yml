@@ -1,4 +1,4 @@
-svenugopalan/Pipelines7:
+svenugopalan/Pipelines8:
   Env:
     - EXAMPLE: '"This is an example manifest environment variable."'
     
